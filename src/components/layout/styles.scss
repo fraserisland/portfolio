@@ -1,11 +1,19 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$secondary-color: #634332;
+
+$small-screen: 300px;
+$medium-screen: 700px;
+$large-screen: 1100px;
+
 .layout__containter {
     min-height: 100vh;
     min-width: 100vw;
-    background-color: aquamarine;
+    background-color: $primary-color;
     overflow: hidden;
 
-    @media screen and (min-width: 480px) {
-        background-color: green;
+    @media screen and (min-width: $medium-screen) {
+      background-color: $secondary-color;
     }
 }
 

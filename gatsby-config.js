@@ -17,6 +17,14 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        options: {
+          emitWarning: true,
+          failOnError: false
+        }
+      }
+    }, {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
