@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import Button from '../button';
 
 const Navbar = ({ links }) => (
   <div className="navbar__container">
@@ -14,6 +15,7 @@ const Navbar = ({ links }) => (
         </Link>
       ))
     }
+    <Button text="contact" />
   </div>
 );
 
