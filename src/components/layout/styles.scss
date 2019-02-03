@@ -1,0 +1,15 @@
+.layout__containter {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: aquamarine;
+    overflow: hidden;
+
+    @media screen and (min-width: 480px) {
+        background-color: green;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
