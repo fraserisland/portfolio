@@ -1,26 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
+import Layout from '../layouts';
 import Hero from '../components/hero';
 import SEO from '../components/seo';
 
-const IndexPage = ({ data }) => (
+const WorkPage = ({ data }) => (
   <Layout>
     <SEO title="Work" keywords={['gatsby', 'application', 'react']} />
     <Hero
-      title="Work"
-      description="me weerrkrkkkkkk"
+      title="Feel free to look at what work i've done."
       img={data.placeholderImage.childImageSharp.fluid}
     />
   </Layout>
 );
 
-IndexPage.propTypes = {
+WorkPage.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
-export default IndexPage;
+export default WorkPage;
 
 export const query = graphql`
   query WorkPageQuery{

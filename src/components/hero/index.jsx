@@ -2,11 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
+import './styles.scss';
+
 const Hero = ({ title, description, img }) => (
-  <div>
-    <h1>{title}</h1>
-    <div>{description}</div>
-    <Img fluid={img} />
+  <div className="hero__container">
+    <div className="layout__max">
+      <h1 className="hero__title">{title}</h1>
+      <div className="hero__description">{description}</div>
+      <div className="hero__img--holder">
+        <Img className="hero__img" fluid={img} />
+      </div>
+    </div>
   </div>
 );
 

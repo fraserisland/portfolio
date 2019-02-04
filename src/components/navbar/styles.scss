@@ -1,3 +1,23 @@
+@import "../../styles/variable";
+
 .navbar__container {
-  
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  background-color: #FFF;
+}
+
+.navbar__links-holder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar__link {
+  color: #000;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.navbar__link:first-child {
+  margin: 0 1rem 0 0;
 }

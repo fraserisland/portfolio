@@ -2,31 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../layouts';
-import SEO from '../components/seo';
 import Hero from '../components/hero';
+import SEO from '../components/seo';
 
-const About = ({ data }) => (
+const BlogPage = ({ data }) => (
   <Layout>
-    <SEO
-      title="About"
-      keywords={['gatsby', 'application', 'react']}
-    />
+    <SEO title="Blog" keywords={['gatsby', 'application', 'react']} />
     <Hero
-      title="Everything you should know about me."
+      title="Some pieces i've written, read through, hopefully you enjoy."
       img={data.placeholderImage.childImageSharp.fluid}
     />
   </Layout>
 );
 
-About.propTypes = {
+BlogPage.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
-export default About;
+export default BlogPage;
 
 export const query = graphql`
-  query AboutPageQuery{
-    placeholderImage: file(relativePath: { eq: "shape-triangle.png" }) {
+  query BlogPageQuery{
+    placeholderImage: file(relativePath: { eq: "shape-cross.png" }) {
       childImageSharp {
         fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid
