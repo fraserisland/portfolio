@@ -1,0 +1,22 @@
+.hero__container {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: #000;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+
+.hero__title {
+  position: relative;
+  z-index: 10;
+}
+
+.hero__img--holder {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 300px;
+}

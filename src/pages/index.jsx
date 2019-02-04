@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
+import Layout from '../layouts';
 import Hero from '../components/hero';
 import SEO from '../components/seo';
 
@@ -9,8 +9,13 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
     <Hero
-      title="Home"
-      description="welcomeweeeee"
+      title={(
+        <div>
+          I am Fraser Solomon.
+          <br />
+          A Web Developer based in the Gold Coast.
+        </div>
+      )}
       img={data.placeholderImage.childImageSharp.fluid}
     />
   </Layout>

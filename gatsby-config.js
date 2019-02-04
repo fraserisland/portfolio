@@ -17,6 +17,14 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Open Sans', 'Prata']
+        }
+      }
+    },
+    {
       resolve: 'gatsby-plugin-eslint',
       options: {
         options: {

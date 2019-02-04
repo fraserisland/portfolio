@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Navbar from '../navbar';
+import Navbar from '../components/navbar';
+
+import '../styles/main.scss';
 import './styles.scss';
 
 const Layout = ({ children }) => (
@@ -10,17 +12,10 @@ const Layout = ({ children }) => (
         { title: 'Home', slug: '/' },
         { title: 'About', slug: '/about' },
         { title: 'Work', slug: '/work' },
+        { title: 'Blog', slug: '/blog' },
       ]}
     />
     <main>{children}</main>
-    <footer>
-      ©
-      {
-        new Date().getFullYear()
-      }
-      , Built with
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
-    </footer>
   </div>
 );
 
