@@ -1,16 +1,12 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
+import './styles.scss';
 
 const Footer = () => (
   <div className="footer__container">
     <div className="layout__max">
       <footer>
-        ©
-        {
-          new Date().getFullYear()
-        }
-        , Built with
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        © Copyright Fraser Solomon Developtment
       </footer>
     </div>
   </div>

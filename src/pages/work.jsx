@@ -7,7 +7,17 @@ import SEO from '../components/seo';
 
 const WorkPage = ({ data }) => (
   <Layout>
-    <SEO title="Work" keywords={['gatsby', 'application', 'react']} />
+    <SEO
+      title="Work"
+      keywords={[
+        'fraser solomon',
+        'work',
+        'freelancer',
+        'web developer',
+        'react',
+        'javascript',
+      ]}
+    />
     <Hero
       title="Feel free to look at what work i've done."
       img={data.placeholderImage.childImageSharp.fluid}

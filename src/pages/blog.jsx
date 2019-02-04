@@ -7,7 +7,15 @@ import SEO from '../components/seo';
 
 const BlogPage = ({ data }) => (
   <Layout>
-    <SEO title="Blog" keywords={['gatsby', 'application', 'react']} />
+    <SEO
+      title="Blog"
+      keywords={[
+        'websites',
+        'fraser',
+        'solomon',
+        'blog',
+      ]}
+    />
     <Hero
       title="Some pieces i've written, read through, hopefully you enjoy."
       img={data.placeholderImage.childImageSharp.fluid}

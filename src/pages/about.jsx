@@ -9,7 +9,7 @@ const About = ({ data }) => (
   <Layout>
     <SEO
       title="About"
-      keywords={['gatsby', 'application', 'react']}
+      keywords={['about', 'fraser solomon', 'info', 'social']}
     />
     <Hero
       title="Everything you should know about me."

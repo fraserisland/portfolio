@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 import '../styles/main.scss';
 import './styles.scss';
@@ -16,6 +17,7 @@ const Layout = ({ children }) => (
       ]}
     />
     <main>{children}</main>
+    <Footer />
   </div>
 );
 
