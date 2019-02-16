@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../layouts';
-import Hero from '../components/hero';
+import Hero from '../components/Hero';
 import SEO from '../components/seo';
 
 const IndexPage = ({ data }) => (

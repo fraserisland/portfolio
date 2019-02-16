@@ -6,7 +6,7 @@ const Footer = () => (
   <div className="footer__container">
     <div className="layout__max">
       <footer>
-        © Copyright Fraser Solomon Developtment
+        © Copyright Fraser Solomon Development
       </footer>
     </div>
   </div>

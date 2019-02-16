@@ -14,6 +14,7 @@ const Layout = ({ children }) => (
         { title: 'About', slug: '/about' },
         { title: 'Work', slug: '/work' },
         { title: 'Blog', slug: '/blog' },
+        { title: 'Contact', slug: '/contact' },
       ]}
     />
     <main>{children}</main>

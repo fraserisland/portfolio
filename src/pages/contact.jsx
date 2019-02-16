@@ -4,9 +4,8 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts';
 import Hero from '../components/Hero';
 import SEO from '../components/seo';
-import Listing from '../components/Listing';
 
-const BlogPage = ({ data }) => (
+const ContactPage = ({ data }) => (
   <Layout>
     <SEO
       title="Blog"
@@ -18,21 +17,20 @@ const BlogPage = ({ data }) => (
       ]}
     />
     <Hero
-      title="Some pieces i've written, read through, hopefully you enjoy."
+      title="Contact."
       img={data.placeholderImage.childImageSharp.fluid}
     />
-    <Listing items={[{ title: 'hello' }, { title: 'hello' }]} />
   </Layout>
 );
 
-BlogPage.propTypes = {
+ContactPage.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
-export default BlogPage;
+export default ContactPage;
 
 export const query = graphql`
-  query BlogPageQuery{
+  query ContactPageQuery{
     placeholderImage: file(relativePath: { eq: "shape-cross.png" }) {
       childImageSharp {
         fluid(maxWidth: 300) {
