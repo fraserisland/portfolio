@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../layouts';
 import Hero from '../components/Hero';
+import Form from '../components/Form';
 import SEO from '../components/seo';
 
 const ContactPage = ({ data }) => (
@@ -18,8 +19,10 @@ const ContactPage = ({ data }) => (
     />
     <Hero
       title="Contact."
+      description="asdasd"
       img={data.placeholderImage.childImageSharp.fluid}
     />
+    <Form />
   </Layout>
 );
 
