@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../layouts';
 import Hero from '../components/Hero';
+import Listing from '../components/Listing';
 import SEO from '../components/seo';
 
 const WorkPage = ({ data }) => (
@@ -22,6 +23,7 @@ const WorkPage = ({ data }) => (
       title="Feel free to look at what work i've done."
       img={data.placeholderImage.childImageSharp.fluid}
     />
+    <Listing items={data.allMarkdownRemark.edges} />
   </Layout>
 );
 
@@ -37,6 +39,18 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "work" } } }) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            path
+          }
         }
       }
     }

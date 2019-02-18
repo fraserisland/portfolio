@@ -21,7 +21,7 @@ const BlogPage = ({ data }) => (
       title="Some pieces i've written, read through, hopefully you enjoy."
       img={data.placeholderImage.childImageSharp.fluid}
     />
-    <Listing items={[{ title: 'hello' }, { title: 'hello' }]} />
+    <Listing items={data.allMarkdownRemark.edges} />
   </Layout>
 );
 
@@ -32,11 +32,23 @@ BlogPage.propTypes = {
 export default BlogPage;
 
 export const query = graphql`
-  query BlogPageQuery{
+  query BlogPageImageQuery {
     placeholderImage: file(relativePath: { eq: "shape-cross.png" }) {
       childImageSharp {
         fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "blog" } } }) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            path
+          }
         }
       }
     }
