@@ -6,9 +6,7 @@ import Hero from '../components/Hero';
 import Listing from '../components/Listing';
 import SEO from '../components/seo';
 
-const WorkPage = ({ data }) => {
-  console.log(data)
-  return (
+const WorkPage = ({ data }) => (
   <Layout>
     <SEO
       title="Work"
@@ -27,8 +25,7 @@ const WorkPage = ({ data }) => {
     />
     <Listing items={data.allMarkdownRemark.edges} />
   </Layout>
-)
-};
+);
 
 WorkPage.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,

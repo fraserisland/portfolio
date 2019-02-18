@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
 import './styles.scss';
 
 const Listing = ({ items }) => (
@@ -9,7 +9,7 @@ const Listing = ({ items }) => (
 
       {
         items.map(item => (
-          <Link to={item.node.frontmatter.path}>
+          <Link key={item.node.frontmatter.title} to={item.node.frontmatter.path}>
             {item.node.frontmatter.title}
           </Link>
         ))

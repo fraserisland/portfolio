@@ -6,26 +6,24 @@ import Hero from '../components/Hero';
 import SEO from '../components/seo';
 import Listing from '../components/Listing';
 
-const BlogPage = ({ data }) => {
-  return (
-    <Layout>
-      <SEO
-        title="Blog"
-        keywords={[
-          'websites',
-          'fraser',
-          'solomon',
-          'blog',
-        ]}
-      />
-      <Hero
-        title="Some pieces i've written, read through, hopefully you enjoy."
-        img={data.placeholderImage.childImageSharp.fluid}
-      />
-      <Listing items={data.allMarkdownRemark.edges} />
-    </Layout>
-  )
-}
+const BlogPage = ({ data }) => (
+  <Layout>
+    <SEO
+      title="Blog"
+      keywords={[
+        'websites',
+        'fraser',
+        'solomon',
+        'blog',
+      ]}
+    />
+    <Hero
+      title="Some pieces i've written, read through, hopefully you enjoy."
+      img={data.placeholderImage.childImageSharp.fluid}
+    />
+    <Listing items={data.allMarkdownRemark.edges} />
+  </Layout>
+);
 
 BlogPage.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
